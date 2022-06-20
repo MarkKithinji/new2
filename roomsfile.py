@@ -7,17 +7,20 @@ def win4():
     window4=Toplevel()
     window4.title('rooms file')
     window4.geometry('600x600')
-    window4.configure(bg='  ')
+    window4.configure(bg='#F0E68C')
 
-    class room:
+    # class room:
     
-         def __init__(self, capacity, wing, name):
-             self.cap=capacity
-             self.wing= wing
-             self.name= name
+    #      def __init__(self, capacity, wing, name):
+    #          self.cap=capacity
+    #          self.wing= wing
+    #          self.name= name
 
-         def details(self):
-             print( f' The {self.cap} building, wing {self.wing} has a capacity of {self.cap}')
+    #      def details(self):
+    #          print( f' The {self.cap} building, wing {self.wing} has a capacity of {self.cap}')
+    
+    
+    
     lbl= Label(window4, text='ensure you have filled all fields'.upper(), bg='#F0E68C')
     lbl.place(x= 20, y=10)
 

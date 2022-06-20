@@ -57,13 +57,13 @@ def win2():
     e_s5.insert(0, 'enter taken subject cluster')
     e_s5.place(x= 20, y= 190)
     def click1():
-        sign.config(text=input1+ input2+' admission number '+input3+' has scored an average of'+ input4+ 'in the following subject cluster'+ input5)
+        messagebox.showinfo(text=input1+ input2+' admission number '+input3+' has scored an average of'+ input4+ 'in the following subject cluster'+ input5)
 
-    btn1=Label(window2, fg='black', font=('Arial', 2))
-    btn1.place(x=10, y=550)
+    # btn1=Label(window2, text='busted', fg='black', font=('Arial', 2))
+    # btn1.place(x=10, y=550)
    
 
-    sign=Button(window2, text='submitt', width=50, font='forte', bg='green', fg='#000000')
+    sign=Button(window2, text='submitt', width=50, font='forte', bg='green', fg='#000000', command=click1)
     sign.place(x=20, y=450)
 
     def click2():

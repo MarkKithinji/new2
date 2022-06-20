@@ -1,28 +1,22 @@
-from tkinter import *
+from tkinter import Label, Tk 
+import time
+app_window = Tk() 
+app_window.title("Digital Clock") 
+app_window.geometry("420x150") 
+app_window.resizable(1,1)
 
-ws = Tk()
-ws.title('PythonGuides')
-ws.geometry('400x300')
-ws.config(bg='#84BF04')
+text_font= ("Boulder", 68, 'bold')
+background = "#f2e750"
+foreground= "#363529"
+border_width = 25
 
-message ='''
-Dear Reader,
+label = Label(app_window, font=text_font, bg=background, fg=foreground, bd=border_width) 
+label.grid(row=0, column=1)
 
-    Thank you for giving your
-    Love and Support to PythonGuides.
-    PythonGuides is now available on 
-    YouTube with the same name.
+def digital_clock(): 
+   time_live = time.strftime("%H:%M:%S")
+   label.config(text=time_live) 
+   label.after(200, digital_clock)
 
-Thanks & Regards,
-Team PythonGuides '''
-
-text_box = Text(
-    ws,
-    height=12,
-    width=40
-)
-text_box.pack(expand=True)
-text_box.insert('end', message)
-text_box.config(state='disabled')
-
-ws.mainloop()
+digital_clock()
+app_window.mainloop()
