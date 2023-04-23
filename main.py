@@ -65,10 +65,10 @@ def passC():
     if pass1.get()=='1234' and name_.get()=='mark':
         messagebox.showinfo('LOGIN SUCCESSFUL!','       WELCOME *-*    ')
 
-    elif pass1.get()!='1234' and name_.get()=='mark':
+    elif pass1.get()!='1234' and name_.get()=='Mark':
         messagebox.showerror('notice'.upper(), 'YOU ENTERED THE WRONG PASSWORD\n \tPLEASE RETRY') 
 
-    elif pass1.get()=='1234' and name_.get()!='mark':
+    elif pass1.get()=='1234' and name_.get()!='Mark':
         messagebox.showerror('NOTICE', 'THE USERNAME IS NOT LOGGED IN THE DATABASE\n \t\tSORRY')   
     else:
         messagebox.showerror('ACCESS DENIED', '   YOUR DETAILS DO NOT MATCH ANY OF OUR FILES  :(')
